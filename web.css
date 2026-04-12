@@ -220,6 +220,139 @@ body {
   }
 }
 
+/* Section */
+/* Section */
+.certifications-section {
+  padding: 60px 8%;
+  background: #0b1320;
+  color: white;
+}
+
+/* Heading */
+.certifications-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #00d4ff;
+}
+
+/* ✅ GRID FIX (important) */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.cert-card {
+  background: #111c2e;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Width control (no full stretch) */
+.cert-card {
+  max-width: 400px;
+  margin: center;
+}
+
+/* Hover Glow */
+.cert-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid #00d4ff;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+}
+
+/* Title */
+.cert-card h3 {
+  color: #14b8d4;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+/* Subtext */
+.cert-card p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* List */
+.cert-card ul {
+  padding-left: 18px;
+}
+
+.cert-card ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Bullet color */
+.cert-card ul li::marker {
+  color: #00d4ff;
+}
+
+/* 🏅 Left Icon (fixed properly) */
+.cert-card::before {
+  content: "🏅";
+  font-size: 20px;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+}
+
+/* ↗ Top-right icon */
+.cert-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #00d4ff;
+  font-size: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* Date badge */
+.cert-date {
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: #9fb3c8;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .certifications-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certifications-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 8px var(--main-color); }
+  to { text-shadow: 0 0 20px #00ff41; }
+}
+
 /* Social Icons */
 .social-icons {
   display: flex; justify-content: center; margin: 30px 0;
@@ -324,7 +457,7 @@ footer {
 }
 
 .contact-form .btn:hover {
-  background: #1a9395;
+  background: #149ed0;
   box-shadow: 0 0 20px #2d97d0;
   transform: scale(1.05);
 }
