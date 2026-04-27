@@ -427,6 +427,10 @@ footer {
   font-weight: 600;
 }
 
+.contact-form textarea {
+  resize: none;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -436,6 +440,7 @@ footer {
   background: #081b29;
   color: var(--text-color);
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .contact-form input:focus,
@@ -443,7 +448,6 @@ footer {
   outline: none;
   border-color: #165693;
   box-shadow: 0 0 15px #187ee4;
-  transform: scale(1.02);
 }
 
 .contact-form .btn {
